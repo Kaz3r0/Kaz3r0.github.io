@@ -1,0 +1,274 @@
+<html>
+<head>
+<title>BattleShip.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #5e946c;}
+.s1 { color: #a8afbe;}
+.s2 { color: #c8498d;}
+.s3 { color: #a3ccb5;}
+.s4 { color: #a6aa43;}
+.s5 { color: #ccb86c;}
+.s6 { color: #bb8f73;}
+.s7 { color: #aab77c; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#132623">
+<pre><span class="s0">/* 
+ 
+.------..------..------..------..------..------. 
+|K.--. ||A.--. ||Z.--. ||E.--. ||R.--. ||O.--. | 
+| :/\: || (\/) || :(): || (\/) || :(): || :/\: | 
+| :\/: || :\/: || ()() || :\/: || ()() || :\/: | 
+| '--'K|| '--'A|| '--'Z|| '--'E|| '--'R|| '--'O| 
+`------'`------'`------'`------'`------'`------' 
+ 
+*/</span>
+<span class="s2">import </span><span class="s1">java.util.*</span><span class="s3">;</span>
+
+<span class="s2">public class </span><span class="s1">BattleShip{</span>
+    <span class="s2">public static void </span><span class="s1">main(String[] args) {</span>
+        <span class="s1">Scanner kj = </span><span class="s2">new </span><span class="s1">Scanner(System.in)</span><span class="s3">;</span>
+        <span class="s0">/* A 2D array in which a battleship grid is created with the characters '_' 
+         * even though they are saved as a string. */</span>
+        <span class="s1">String[][] battleShip =</span>
+                <span class="s1">{{</span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s1">}</span><span class="s5">,</span>
+                        <span class="s1">{</span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s1">}</span><span class="s5">,</span>
+                        <span class="s1">{</span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s1">}</span><span class="s5">,</span>
+                        <span class="s1">{</span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s1">}</span><span class="s5">,</span>
+                        <span class="s1">{</span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s1">}</span><span class="s5">,</span>
+                        <span class="s1">{</span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s1">}</span><span class="s5">,</span>
+                        <span class="s1">{</span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s1">}</span><span class="s5">,</span>
+                        <span class="s1">{</span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s5">, </span><span class="s4">&quot;_ &quot;</span><span class="s1">}}</span><span class="s3">;</span>
+        <span class="s0">/* A user input value to decide how many targets will be created. */</span>
+        <span class="s2">int </span><span class="s1">maxInput = kj.nextInt()</span><span class="s3">;</span>
+        <span class="s0">/* A 1D array to store the next inputs with the array being the 
+         * length of the user input. */</span>
+        <span class="s1">String[] gridValue = </span><span class="s2">new </span><span class="s1">String[maxInput]</span><span class="s3">;</span>
+        <span class="s1">gridValue[</span><span class="s6">0</span><span class="s1">] = kj.nextLine()</span><span class="s3">;</span>
+        <span class="s0">/* A for loop that works based on the maxInput variable set previously in code. */</span>
+        <span class="s2">for </span><span class="s1">(</span><span class="s2">int </span><span class="s1">k = </span><span class="s6">0</span><span class="s3">; </span><span class="s1">k &lt; maxInput</span><span class="s3">; </span><span class="s1">k++) {</span>
+            <span class="s1">gridValue[k] = kj.nextLine()</span><span class="s3">;</span>
+        <span class="s1">}</span>
+        <span class="s0">/* A 1D array to store the input values where the player will attack. */</span>
+        <span class="s1">String[] attackValues = </span><span class="s2">new </span><span class="s1">String[</span><span class="s6">5</span><span class="s1">]</span><span class="s3">;</span>
+        <span class="s1">attackValues[</span><span class="s6">0</span><span class="s1">] = kj.nextLine()</span><span class="s3">;</span>
+        <span class="s0">/* A for loop that takes in inputs to attack at until a negative 
+         * number is inputted, which will end the for loop. */</span>
+        <span class="s2">for </span><span class="s1">(</span><span class="s2">int </span><span class="s1">p = </span><span class="s6">1</span><span class="s3">; </span><span class="s1">p &lt; </span><span class="s6">10</span><span class="s3">; </span><span class="s1">p++) {</span>
+            <span class="s1">attackValues[p] = kj.nextLine()</span><span class="s3">;</span>
+            <span class="s2">if </span><span class="s1">(attackValues[p].charAt(</span><span class="s6">0</span><span class="s1">) == </span><span class="s4">'-'</span><span class="s1">)</span>
+                <span class="s2">break</span><span class="s3">;</span>
+        <span class="s1">}</span>
+        <span class="s0">/* A for loop that increments the col and row value of the setTarget method. 
+         * Explanation of setTarget method below. */</span>
+        <span class="s2">for </span><span class="s1">(</span><span class="s2">int </span><span class="s1">l = </span><span class="s6">0</span><span class="s3">; </span><span class="s1">l &lt;= (gridValue.length) - </span><span class="s6">1</span><span class="s3">; </span><span class="s1">l++) {</span>
+            <span class="s1">setTarget(battleShip</span><span class="s5">, </span><span class="s1">gridValue[l].charAt(</span><span class="s6">0</span><span class="s1">)</span><span class="s5">, </span><span class="s1">gridValue[l].charAt(</span><span class="s6">1</span><span class="s1">))</span><span class="s3">;</span>
+        <span class="s1">}</span>
+        <span class="s0">/* A for loop that increments to a maximum of the length of the attackValue array. 
+         * This uses the attackGrid method. */</span>
+        <span class="s2">for </span><span class="s1">(</span><span class="s2">int </span><span class="s1">m = </span><span class="s6">0</span><span class="s3">; </span><span class="s1">m &lt;= (attackValues.length) - </span><span class="s6">2</span><span class="s3">; </span><span class="s1">m++) {</span>
+            <span class="s1">attackGrid(battleShip</span><span class="s5">, </span><span class="s1">attackValues[m].charAt(</span><span class="s6">0</span><span class="s1">)</span><span class="s5">, </span><span class="s1">attackValues[m].charAt(</span><span class="s6">1</span><span class="s1">))</span><span class="s3">;</span>
+        <span class="s1">}</span>
+        <span class="s0">/* An if and else if statement that looks for whether the boolean method 
+         * checkAttackerWin is true or false. If true it will change the String 
+         * victory to equal the String &quot;Defending Player Wins&quot;, otherwise it will 
+         * equal &quot;Attacking Player Wins&quot;. */</span>
+        <span class="s1">String victory = </span><span class="s2">null</span><span class="s3">;</span>
+        <span class="s2">if </span><span class="s1">(checkAttackerWin(battleShip) == </span><span class="s2">true</span><span class="s1">) {</span>
+            <span class="s1">victory = </span><span class="s4">&quot;Defending Player Wins&quot;</span><span class="s3">;</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(checkAttackerWin(battleShip) == </span><span class="s2">false</span><span class="s1">) {</span>
+            <span class="s1">victory = </span><span class="s4">&quot;Attacking Player Wins&quot;</span><span class="s3">;</span>
+        <span class="s1">}</span>
+        <span class="s0">/* Creates a string that holds the value of the method getStats to reference later */</span>
+        <span class="s1">String stats = getStats(battleShip)</span><span class="s3">;</span>
+        <span class="s0">/* A for loop that converts all T values in the battleShip board back to an _. 
+         * This uses a custom method called newField. */</span>
+        <span class="s2">for </span><span class="s1">(</span><span class="s2">int </span><span class="s1">b = </span><span class="s6">0</span><span class="s3">; </span><span class="s1">b &lt;= (gridValue.length) - </span><span class="s6">1</span><span class="s3">; </span><span class="s1">b++) {</span>
+            <span class="s1">newField(battleShip</span><span class="s5">, </span><span class="s1">gridValue[b].charAt(</span><span class="s6">0</span><span class="s1">)</span><span class="s5">, </span><span class="s1">gridValue[b].charAt(</span><span class="s6">1</span><span class="s1">))</span><span class="s3">;</span>
+        <span class="s1">}</span>
+        <span class="s0">/* Prints the new grid with the method getGrid. */</span>
+        <span class="s1">getGrid(battleShip)</span><span class="s3">;</span>
+        <span class="s0">/* Prints the victory String after the board is displayed. */</span>
+        <span class="s1">System.out.println(victory)</span><span class="s3">;</span>
+        <span class="s0">/* Prints the stats String after other Strings are displayed. */</span>
+        <span class="s1">System.out.println(stats)</span><span class="s3">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">/* This custom array converts any remaining T values in the array after converting to 
+ 
+.------..------..------..------..------..------. 
+|K.--. ||A.--. ||Z.--. ||E.--. ||R.--. ||O.--. | 
+| :/\: || (\/) || :(): || (\/) || :(): || :/\: | 
+| :\/: || :\/: || ()() || :\/: || ()() || :\/: | 
+| '--'K|| '--'A|| '--'Z|| '--'E|| '--'R|| '--'O| 
+`------'`------'`------'`------'`------'`------' 
+ 
+     * X's and O's to a _. goes after attackGrid but before the printing of getGrid. */</span>
+    <span class="s2">public static void </span><span class="s1">newField(String[][] board</span><span class="s5">, </span><span class="s2">char </span><span class="s1">col</span><span class="s5">, </span><span class="s2">char </span><span class="s1">row) {</span>
+        <span class="s2">if </span><span class="s1">(col == </span><span class="s4">'A'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">0</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">0</span><span class="s1">] = </span><span class="s4">&quot;_ &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'B'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">1</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">1</span><span class="s1">] = </span><span class="s4">&quot;_ &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'C'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">2</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">2</span><span class="s1">] = </span><span class="s4">&quot;_ &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'D'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">3</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">3</span><span class="s1">] = </span><span class="s4">&quot;_ &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'E'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">4</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">4</span><span class="s1">] = </span><span class="s4">&quot;_ &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'F'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">5</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">5</span><span class="s1">] = </span><span class="s4">&quot;_ &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'G'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">6</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">6</span><span class="s1">] = </span><span class="s4">&quot;_ &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'H'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">7</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">7</span><span class="s1">] = </span><span class="s4">&quot;_ &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+    <span class="s0">/* The setTargets method would look at the character input for the char col. 
+     * if the char in col matches the one found in the if statement, it will replace 
+     * The value found in the 2D index with the char named &quot;T&quot;. */</span>
+    <span class="s2">public static void </span><span class="s1">setTarget(String[][] board</span><span class="s5">, </span><span class="s2">char </span><span class="s1">col</span><span class="s5">, </span><span class="s2">char </span><span class="s1">row) {</span>
+        <span class="s2">if </span><span class="s1">(col == </span><span class="s4">'A'</span><span class="s1">) {</span>
+            <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">0</span><span class="s1">] = </span><span class="s4">&quot;T &quot;</span><span class="s3">;</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'B'</span><span class="s1">) {</span>
+            <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">1</span><span class="s1">] = </span><span class="s4">&quot;T &quot;</span><span class="s3">;</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'C'</span><span class="s1">) {</span>
+            <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">2</span><span class="s1">] = </span><span class="s4">&quot;T &quot;</span><span class="s3">;</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'D'</span><span class="s1">) {</span>
+            <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">3</span><span class="s1">] = </span><span class="s4">&quot;T &quot;</span><span class="s3">;</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'E'</span><span class="s1">) {</span>
+            <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">4</span><span class="s1">] = </span><span class="s4">&quot;T &quot;</span><span class="s3">;</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'F'</span><span class="s1">) {</span>
+            <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">5</span><span class="s1">] = </span><span class="s4">&quot;T &quot;</span><span class="s3">;</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'G'</span><span class="s1">) {</span>
+            <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">6</span><span class="s1">] = </span><span class="s4">&quot;T &quot;</span><span class="s3">;</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'H'</span><span class="s1">) {</span>
+            <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">7</span><span class="s1">] = </span><span class="s4">&quot;T &quot;</span><span class="s3">;</span>
+        <span class="s1">}</span>
+
+    <span class="s1">}</span>
+    <span class="s0">/* The method getGrid just prints out the 2D array after it has been modified by 
+     * the setTarget method. */</span>
+    <span class="s2">public static </span><span class="s1">String getGrid(String[][] board) {</span>
+        <span class="s2">for </span><span class="s1">(String[] strings : board) {</span>
+            <span class="s2">int </span><span class="s1">j = </span><span class="s6">0</span><span class="s3">;</span>
+            <span class="s2">while </span><span class="s1">(j &lt; strings.length) {</span>
+                <span class="s1">System.out.print(strings[j])</span><span class="s3">;</span>
+                <span class="s1">j++</span><span class="s3">;</span>
+            <span class="s1">}</span>
+            <span class="s1">System.out.println()</span><span class="s3">;</span>
+        <span class="s1">}</span>
+        <span class="s2">return null</span><span class="s3">;</span>
+    <span class="s1">}</span>
+    <span class="s0">/* This method looks for any T values in the array and converts it to an X. 
+     * If there is no T in that index of the array, it will convert it to an O. */</span>
+    <span class="s2">public static void </span><span class="s1">attackGrid(String[][] board</span><span class="s5">, </span><span class="s2">char </span><span class="s1">col</span><span class="s5">, </span><span class="s2">char </span><span class="s1">row) {</span>
+        <span class="s2">if </span><span class="s1">(col == </span><span class="s4">'A'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">0</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">0</span><span class="s1">] = </span><span class="s4">&quot;X &quot;</span><span class="s3">;</span>
+            <span class="s1">} </span><span class="s2">else </span><span class="s1">{</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">0</span><span class="s1">] = </span><span class="s4">&quot;O &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'B'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">1</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">1</span><span class="s1">] = </span><span class="s4">&quot;X &quot;</span><span class="s3">;</span>
+            <span class="s1">} </span><span class="s2">else </span><span class="s1">{</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">1</span><span class="s1">] = </span><span class="s4">&quot;O &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'C'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">2</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">2</span><span class="s1">] = </span><span class="s4">&quot;X &quot;</span><span class="s3">;</span>
+            <span class="s1">} </span><span class="s2">else </span><span class="s1">{</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">2</span><span class="s1">] = </span><span class="s4">&quot;O &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'D'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">3</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">3</span><span class="s1">] = </span><span class="s4">&quot;X &quot;</span><span class="s3">;</span>
+            <span class="s1">} </span><span class="s2">else </span><span class="s1">{</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">3</span><span class="s1">] = </span><span class="s4">&quot;O &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'E'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">4</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">4</span><span class="s1">] = </span><span class="s4">&quot;X &quot;</span><span class="s3">;</span>
+            <span class="s1">} </span><span class="s2">else </span><span class="s1">{</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">4</span><span class="s1">] = </span><span class="s4">&quot;O &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'F'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">5</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">5</span><span class="s1">] = </span><span class="s4">&quot;X &quot;</span><span class="s3">;</span>
+            <span class="s1">} </span><span class="s2">else </span><span class="s1">{</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">5</span><span class="s1">] = </span><span class="s4">&quot;O &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'G'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">6</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">6</span><span class="s1">] = </span><span class="s4">&quot;X &quot;</span><span class="s3">;</span>
+            <span class="s1">} </span><span class="s2">else </span><span class="s1">{</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">6</span><span class="s1">] = </span><span class="s4">&quot;O &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">} </span><span class="s2">else if </span><span class="s1">(col == </span><span class="s4">'H'</span><span class="s1">) {</span>
+            <span class="s2">if </span><span class="s1">(board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">7</span><span class="s1">] == </span><span class="s4">&quot;T &quot;</span><span class="s1">) {</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">7</span><span class="s1">] = </span><span class="s4">&quot;X &quot;</span><span class="s3">;</span>
+            <span class="s1">} </span><span class="s2">else </span><span class="s1">{</span>
+                <span class="s1">board[row - </span><span class="s6">49</span><span class="s1">][</span><span class="s6">7</span><span class="s1">] = </span><span class="s4">&quot;O &quot;</span><span class="s3">;</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+
+    <span class="s1">}</span>
+    <span class="s0">/* A boolean method that scan the entire 2D array for any T string values. 
+     * If it finds any T values it will make it return true values otherwise 
+     * it will return false. */</span>
+    <span class="s2">public static boolean </span><span class="s1">checkAttackerWin(String[][] board) {</span>
+        <span class="s2">for </span><span class="s1">(</span><span class="s2">int </span><span class="s1">i = </span><span class="s6">0</span><span class="s3">; </span><span class="s1">i &lt; board.length</span><span class="s3">; </span><span class="s1">i++) {</span>
+            <span class="s2">for </span><span class="s1">(</span><span class="s2">int </span><span class="s1">j = </span><span class="s6">0</span><span class="s3">; </span><span class="s1">j &lt; board[i].length</span><span class="s3">; </span><span class="s1">j++) {</span>
+                <span class="s2">if </span><span class="s1">(board[i][j].equals(</span><span class="s4">&quot;T &quot;</span><span class="s1">)) {</span>
+                    <span class="s2">return true</span><span class="s3">;</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s2">return false</span><span class="s3">;</span>
+    <span class="s1">}</span>
+    <span class="s0">/* A method that creates 3 ints that hold the variety of stats, such as 
+     * hits by adding 1 to the hit int every time it finds an X in a 2D array. 
+     * It finds misses and remaining values the same way, either looking for O values 
+     * for misses and T values for remaining. */</span>
+    <span class="s2">public static </span><span class="s1">String getStats(String[][] board){</span>
+        <span class="s2">int </span><span class="s1">hit = </span><span class="s6">0</span><span class="s3">;</span>
+        <span class="s2">int </span><span class="s1">miss = </span><span class="s6">0</span><span class="s3">;</span>
+        <span class="s2">int </span><span class="s1">remains = </span><span class="s6">0</span><span class="s3">;</span>
+        <span class="s2">for </span><span class="s1">(</span><span class="s2">int </span><span class="s1">i = </span><span class="s6">0</span><span class="s3">; </span><span class="s1">i &lt; board.length </span><span class="s3">; </span><span class="s1">i++) {</span>
+            <span class="s2">for </span><span class="s1">(</span><span class="s2">int </span><span class="s1">j = </span><span class="s6">0</span><span class="s3">; </span><span class="s1">j &lt; board[i].length </span><span class="s3">; </span><span class="s1">j++) {</span>
+                <span class="s2">if </span><span class="s1">(board[i][j].equals(</span><span class="s4">&quot;X &quot;</span><span class="s1">)){</span>
+                    <span class="s1">hit = hit+</span><span class="s6">1</span><span class="s3">;</span>
+                <span class="s1">}</span><span class="s2">if </span><span class="s1">(board[i][j].equals(</span><span class="s4">&quot;O &quot;</span><span class="s1">)){</span>
+                    <span class="s1">miss = miss+</span><span class="s6">1</span><span class="s3">;</span>
+                <span class="s1">}</span><span class="s2">if </span><span class="s1">(board[i][j].equals(</span><span class="s4">&quot;T &quot;</span><span class="s1">)){</span>
+                    <span class="s1">remains = remains+</span><span class="s6">1</span><span class="s3">;</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+
+        <span class="s1">}</span>
+        <span class="s0">/* creates a custom String that when printed will say 
+         * &quot;Hits: X 
+         *  Misses: O 
+         *  Remaining Targets: T&quot; */</span>
+        <span class="s1">String stats = </span><span class="s4">&quot;Hits: &quot;</span><span class="s1">+hit+</span><span class="s4">&quot;</span><span class="s7">\n</span><span class="s4">Misses: &quot;</span><span class="s1">+miss+</span><span class="s4">&quot;</span><span class="s7">\n</span><span class="s4">Remaining Targets: &quot;</span><span class="s1">+remains</span><span class="s3">;</span>
+        <span class="s2">return </span><span class="s1">stats</span><span class="s3">;</span><span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>

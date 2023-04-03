@@ -1,0 +1,105 @@
+ head{
+     background-color: #291528;
+}
+ header{
+     background-color: #291528;
+     border: 5px solid #000000;
+     width:50%;
+     margin: auto;
+}
+a{
+    color: #FF8C87;
+} 
+body{
+     background: #9e829c;
+     align: left;
+     overflow-x: hidden;
+}
+ .still-page{
+     margin-left:auto;
+     margin-right:auto;
+     width:1870px;
+}
+ .nav-text{
+     text-align:center;
+}
+ .nav-word{
+     margin-right: 100px;
+}
+ .nav-text>a{
+     color: #FF8C87;
+}
+ .main-body{
+     overflow: hidden;
+     margin-top: 50px;
+}
+.videoL{
+    border: 5px solid #000000; 
+    margin-right: 180px; 
+    margin-left: 260px; 
+    margin-top: 50px;
+}
+.videoR{
+    border: 5px solid #000000; 
+    margin-left: 180px; 
+    margin-right: 260px; 
+    margin-top: 50px;
+    align: right;
+}
+.video-text-L{
+    color: #FF8C87; 
+    margin-left: 50px;
+    width: 400px;
+    background-color: #291528;
+    border: 5px solid #000000;
+    margin-left: 300px
+}
+.video-text-R{
+    align: right;
+    color: #FF8C87;
+    width: 400px;
+    background-color: #291528;
+    border: 5px solid #000000; 
+    margin-left: 230px
+}
+.grid-container {
+  display: grid; 
+  grid-template-columns: repeat(8, 1fr); 
+  gap: 10px 20px;
+  grid-auto-rows: 100px;
+  grid-template-areas: 
+    "a a a a b b b b"
+    "a a a a b b b b"
+    "c c c c d d d d"
+    "c c c c d d d d";
+}
+.grid-item-L {
+  grid-area: a;
+}
+.grid-item-R {
+  grid-area: b;
+}
+.grid-item1{
+  grid-area: c;
+  text-align: center;
+  align-self: end;
+}
+.grid-item2{
+  grid-area: d;
+  text-align: center;
+  align-self: end;
+}
+.discription{
+    align: justify;
+    float: left; 
+    background-color: #291528; 
+    border: 5px solid #000000; 
+    margin-left: 260px; 
+    margin-right: 260px;
+}
+.norm-text{
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+}

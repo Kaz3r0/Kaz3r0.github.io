@@ -1,0 +1,71 @@
+head{
+     background-color: #291528;
+}
+ header{
+     background-color: #291528;
+     border: 5px solid #000000;
+     width:50%;
+     margin: auto;
+} 
+body{
+     background: #9e829c;
+     align: left;
+     overflow-y: scroll;
+}
+ .still-page{
+     margin-left:auto;
+     margin-right:auto;
+     width:1870px;
+}
+ .nav-text{
+     text-align:center;
+}
+ .nav-word{
+     margin-right: 100px;
+}
+ .nav-text>a{
+     color: #FF8C87;
+}
+ .main-body{
+     overflow: hidden;
+     margin-top: 50px;
+}
+.norm-text{
+    color: #e6ebe0;
+    text-align: justify;
+    text-justify: auto;
+    padding-left: 10px;
+}
+.java-frames{
+    float: left; 
+    background-color: #291528; 
+    border: 5px solid black;
+}
+.java-left{
+    background-color: #291528; 
+    border: 5px solid black; 
+    float: right; 
+    margin-right: 10px
+}
+.frames{
+    border: 1px solid black; 
+    align:center;
+}
+.instructions{
+    float: left; 
+    background-color: #291528; 
+    border: 5px solid black; 
+    margin-left: 50px; 
+    margin-top: 200px
+}
+.instruction-left{
+    float: right; 
+    background-color: #291528; 
+    border: 5px solid black;
+    margin-right: 50px; 
+    margin-top: 250px
+}
+ .title{
+     text-align:center;
+     color: #FF8C87 
+}
