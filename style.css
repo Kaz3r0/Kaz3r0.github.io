@@ -233,7 +233,7 @@
     margin-left: 180px;
   }
 } /* styles for phone screens */
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 420px) {
   head {
     background-color: #291528;
   }
@@ -295,13 +295,12 @@
   .still-page {
     margin-left: auto;
     margin-right: auto;
-    width: 1870px;
   }
   .button-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    width: 380px;
+    width: 200px;
   }
   button {
     padding: 10px 20px;
@@ -446,7 +445,7 @@
     float: left;
     background-color: #291528;
     border: 5px solid #000000;
-    margin-left: 2px;
+    margin-left: 5px;
     margin-right: 1000px;
     margin-top: 20px;
     padding-left: 10px;
