@@ -231,7 +231,7 @@ button:hover {
 /* styles for phone screens */
 @media only screen and (max-width: 414px) {
  head{
-     background-color: blue;
+     background-color: #291528;
 }
  header{
      background-color: #291528;
@@ -240,7 +240,7 @@ button:hover {
      margin-left: 550px
 } 
 body{
-     background: #9e829c;
+     background: blue;
      align: left;
 } 
 input[type=number]{
