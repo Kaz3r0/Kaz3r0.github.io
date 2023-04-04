@@ -9,6 +9,10 @@
     width: 930px;
     margin-left: 550px;
   }
+    iframe {
+      width: 560px; 
+      height: 315px;
+  }
   body {
     background: #9e829c;
     align: left;
