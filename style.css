@@ -233,7 +233,7 @@
     margin-left: 180px;
   }
 } /* styles for phone screens */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 414px) {
   head {
     background-color: #291528;
   }
