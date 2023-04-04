@@ -340,7 +340,7 @@
     margin-left: 5px;
     margin-right: 110px;
     padding-bottom: 60px;
-    position: relative;
+    width: 90%;
   }
   .title {
     text-align: center;
@@ -464,6 +464,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    margin-top: 10px;
     margin: 4px 2px;
     cursor: pointer;
     margin-left: 90px;
