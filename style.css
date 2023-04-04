@@ -1,4 +1,4 @@
-{
+
   /* styles for larger screens */
   head {
     background-color: #291528;
@@ -231,7 +231,6 @@
     margin-top: 15px;
     cursor: pointer;
     margin-left: 180px;
-  }
 } /* styles for phone screens */
 @media only screen and (max-width: 414px) {
   head {
