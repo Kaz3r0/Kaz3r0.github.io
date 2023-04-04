@@ -24,44 +24,30 @@
     </h2>
   </header>
   <div class="still-page">
+
     <body>
       <div class="main-body">
         <div class="video-week">
           <h1 class="title">
             <u>
               <b>
-                Video of the Week
+                Random Video
               </b>
             </u>
           </h1>
-          <video width="640" height="360" muted controls>
-            <source src="assets/VideoWeak2.mp4" type="video/mp4">
-          </video>
-          <!--100 chars per lines-->
-          <a href="https://youtu.be/prOeb5wnNEk">
-            <h1 class="subtitle">
-              <u>
-                One Piece: The Modern Odyssey
-              </u>
-            </h1>
-          </a>
-          <p class="norm-text">
-            This video is an analytical deep dive on how the 25 year old Japanese
-            manga One Piece has
-            <br />
-            impacted the modern and classic literary landscape in many ways. This
-            video walks through the
-            <br />
-            story beats of One Piece up to this point. This 6 hour video explains
-            how One Piece is one of the
-            <br />
-            next literary masterpieces of our era.
-          </p>
+          <div id="player">
+          </div>
+          <div>
+            <iframe id="video" width="560" height="315" frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+          <button class="center-button" id="regenerate">
+            Regenerate Video
+          </button>
+          <script src="Script1.js">
+          </script>
           <form>
-            <label for="ratevid" class="subtitle">
-              Rate this Video out of 10
-            </label>
-            <input type="number" id="ratevid" name="ratevid" max="10" min="0">
+            <input type="number" id="ratevid" name="ratevid" max="10" min="0" placeholder="Rate Video Out of 10">
           </form>
         </div>
         <div class="music-month">
@@ -142,7 +128,7 @@
         <ul class="patch-notes">
           <li class="title">
             <u>
-              <h1>
+              <h1 class="patchnote-Text">
                 Patch Notes
               </h1>
             </u>
@@ -159,15 +145,10 @@
             <ul>
               <li>
                 This is the first iteration of the Empty Set Website.
-                <br />
                 As part of CSCI 1170 Assignment 1 this website
-                <br />
                 was created to show my favorite creators and
-                <br />
                 how they inspired me to pick my future job as
-                <br />
                 a computer programmer. Eventually this website
-                <br />
                 will continue to update and be more presentable
               </li>
             </ul>
@@ -181,27 +162,19 @@
             <!--50 lines per block-->
             <ul>
               <li>
-                This is the second iteration of the Empty Set
-                <br />
-                Website. Due to the great changes caused by the CSS
-                <br />
-                and more options for code.The addition of the Monthly
-                <br />
+                This is the second iteration of the Empty Set Website.
+                Due to the great changes caused by the CSS and
+                more options for code.The addition of the Monthly
                 Musical section has been added to show my most recent
-                <br />
                 favorite songs. There is a BOP or DROP button for the
-                <br />
                 user to decide if they like the song or if they want it
-                <br />
                 gone. Hopefully in the future I can add a poll to see the
-                <br />
                 majority as well as have the buttons link to the songs
                 <li>
             </ul>
           </ol>
         </ul>
       </div>
-    </body>
   </div>
-
+  </body>
 </html>

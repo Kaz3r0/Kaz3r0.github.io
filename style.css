@@ -19,6 +19,7 @@ input[type=number]{
      border: 3px solid #ccc;
      transition: 0.5s;
      outline: none;
+     margin-left: 176px;
 }
  input[type=number]:focus {
      border: 3px solid #555;
@@ -39,10 +40,19 @@ input[type="radio"] {
 }
  li{
      list-style-type: none;
+     display: inline-block;
+     width: 90%;
+}
+ ul {
+  text-align: justify;
 }
  a h1.subtitle:hover{
      color: #FF8C87;
-} 
+}
+ ol{
+    margin-left:-20px;
+    width: 500px
+}
 .still-page{
      margin-left:auto;
      margin-right:auto;
@@ -76,6 +86,7 @@ input[type="radio"] {
      float: left;
      background-color: #291528;
      border: 5px solid #000000;
+     margin-top: 40px;
      margin-left: 40px;
      margin-right: 110px;
      padding-bottom: 60px 
@@ -115,11 +126,13 @@ input[type="radio"] {
      background-color: #291528;
      border: 5px solid #000000;
      float: left;
-     margin-top: 0px;
+     margin-top: 60px;
      margin-left: 140px;
      padding-bottom: 20px;
      padding-left: 10px;
-     padding-right: 30px 
+}
+ .patchnote-Text{
+     margin-left: 25px;
 }
  .tg{
      border:none;
@@ -183,4 +196,17 @@ input[type="radio"] {
      color: #e6ebe0;
      text-align:left;
      margin-right: 140px;
+}
+.center-button{
+    background-color: #753C72;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 180px;
 }
