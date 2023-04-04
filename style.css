@@ -243,8 +243,8 @@
     width: 50%
   }
   iframe {
-      width: 280px; 
-      height: 158px;
+      width: 375px; 
+      height: 211px;
   }
   body {
     background: #9e829c;
@@ -258,7 +258,7 @@
     border: 3px solid #ccc;
     transition: 0.5s;
     outline: none;
-    margin-left: 180px;
+    margin-left: 90px;
   }
   input[type="number"]:focus {
     border: 3px solid #555;
@@ -463,6 +463,6 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    margin-left: 180px;
+    margin-left: 90px;
   }
 }
