@@ -69,16 +69,10 @@
             <audio controls>
               <source src="assets/Song1.mp3">
             </audio>
-            <form>
-              <input id="bop1" name="toggle" type="radio">
-              <label class="BoporDrop" for="bop1">
-                Bop
-              </label>
-              <input id="drop1" name="toggle" type="radio">
-              <label class="BoporDrop" for="drop1">
-                Drop
-              </label>
-            </form>
+            <div class="button-container">
+                <button id="bop-btn1" onclick="song1()">Bop</button>
+                <button id="drop-btn1"  onclick="drop1()">Drop</button>
+            </div>
           </p>
           <h2 class="subtitle">
             <u>
@@ -91,16 +85,10 @@
             <audio controls>
               <source src="assets/Song2.mp3">
             </audio>
-            <form>
-              <input id="bop2" name="toggle" type="radio">
-              <label class="BoporDrop" for="bop2">
-                Bop
-              </label>
-              <input id="drop2" name="toggle" type="radio">
-              <label class="BoporDrop" for="drop2">
-                Drop
-              </label>
-            </form>
+            <div class="button-container">
+                <button id="bop-btn2" onclick="song2()">Bop</button>
+                <button id="drop-btn2" onclick="drop2()">Drop</button>
+            </div>
           </p>
           <h2 class="subtitle">
             <u>
@@ -113,16 +101,10 @@
             <audio controls>
               <source src="assets/Song3.mp3">
             </audio>
-            <form>
-              <input id="bop3" name="toggle" type="radio">
-              <label class="BoporDrop" for="bop3">
-                Bop
-              </label>
-              <input id="drop3" name="toggle" type="radio">
-              <label class="BoporDrop" for="drop3">
-                Drop
-              </label>
-            </form>
+            <div class="button-container">
+                <button id="bop-btn3" onclick="song3()">Bop</button>
+                <button id="drop-btn3" onclick="drop3()">Drop</button>
+            </div>
           </p>
         </div>
         <ul class="patch-notes">
@@ -156,6 +138,26 @@
               <u>
                 <h2>
                   Patch 2.0
+                </h2>
+              </u>
+            </li>
+            <!--50 lines per block-->
+            <ul>
+              <li>
+                This is the second iteration of the Empty Set Website.
+                Due to the great changes caused by the CSS and
+                more options for code.The addition of the Monthly
+                Musical section has been added to show my most recent
+                favorite songs. There is a BOP or DROP button for the
+                user to decide if they like the song or if they want it
+                gone. Hopefully in the future I can add a poll to see the
+                majority as well as have the buttons link to the songs
+                <li>
+            </ul>
+            <li class="subtitle">
+              <u>
+                <h2>
+                  Patch 2.5
                 </h2>
               </u>
             </li>

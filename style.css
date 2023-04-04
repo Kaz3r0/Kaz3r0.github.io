@@ -4,7 +4,7 @@
  header{
      background-color: #291528;
      border: 5px solid #000000;
-     width:50%;
+     width:930px;
      margin-left: 550px
 } 
 body{
@@ -19,7 +19,7 @@ input[type=number]{
      border: 3px solid #ccc;
      transition: 0.5s;
      outline: none;
-     margin-left: 176px;
+     margin-left: 180px;
 }
  input[type=number]:focus {
      border: 3px solid #555;
@@ -58,14 +58,27 @@ input[type="radio"] {
      margin-right:auto;
      width:1870px;
 }
-.BoporDrop {
-     color: white;
-     padding: 10px 20px;
-     background-color: #291528;
-     border: thin solid black;
-     border-radius: 10px;
-     margin-left: 80px;
-     display: inline-block;
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 380px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 110px;
+  border: thin solid black;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #753C72;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b56fb1;
 }
  .nav-text{
      text-align:center;
@@ -98,8 +111,14 @@ input[type="radio"] {
  *.subtitle{
      color: white;
      text-align:center;
+     text-decoration: none;
 }
 .subtitle ~ ul{
+     color: white;
+     text-align: justify;
+     text-justify: auto;
+}
+.subtitle ~ b{
      color: white;
      text-align: justify;
      text-justify: auto;
@@ -126,8 +145,7 @@ input[type="radio"] {
      background-color: #291528;
      border: 5px solid #000000;
      float: left;
-     margin-top: 60px;
-     margin-left: 140px;
+     margin-left: 90px;
      padding-bottom: 20px;
      padding-left: 10px;
 }
@@ -187,7 +205,7 @@ input[type="radio"] {
      background-color: #291528;
      border: 5px solid #000000;
      margin-left: 2px;
-     margin-top: 0px;
+     margin-top: 20px;
      padding-left: 10px;
      padding-right: 10px;
      padding-bottom: 30px;
@@ -198,7 +216,6 @@ input[type="radio"] {
      margin-right: 140px;
 }
 .center-button{
-    background-color: #753C72;
     border: none;
     color: white;
     padding: 15px 32px;
