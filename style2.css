@@ -29,9 +29,15 @@
   }
   .nav-text {
     text-align: center;
+  }  
+  .nav-word-end {
   }
   .nav-word {
     margin-right: 100px;
+  }
+    .nav-word:hover,
+  .nav-word-end:hover {
+    color: #9e829c;
   }
   .nav-text > a {
     color: #ff8c87;
@@ -117,8 +123,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 10px;
-  margin-left: 190px;
-  margin-right: 100px;
+  margin-left: 220px;
+  margin-right: 120px;
     }
 
     .photo {
@@ -277,7 +283,7 @@
     text-align: center;
   }
   .nav-word {
-    margin-right: 100px;
+    margin-right: 30px;
   }
   .nav-word-end {
   }
@@ -429,7 +435,7 @@
     text-align: center;
   }
   .nav-word {
-    margin-right: 100px;
+    margin-right: 30px;
   }
   .nav-word-end {
   }

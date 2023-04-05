@@ -1,16 +1,16 @@
 head{
      background-color: #291528;
 }
- header{
-     background-color: #291528;
-     border: 5px solid #000000;
-     width:50%;
-     margin: auto;
-} 
+  header {
+    background-color: #291528;
+    border: 5px solid #000000;
+    width: 930px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 body{
      background: #9e829c;
      align: left;
-     overflow-y: scroll;
 }
  .still-page{
      margin-left:auto;
@@ -68,4 +68,7 @@ body{
  .title{
      text-align:center;
      color: #FF8C87 
+}
+ .color-change {
+     background-color: blue;
 }
