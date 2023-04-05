@@ -295,6 +295,7 @@
   .still-page {
     margin-left: auto;
     margin-right: auto;
+    width: 375px;
   }
   .button-container {
     display: flex;
