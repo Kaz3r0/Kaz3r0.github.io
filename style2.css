@@ -168,6 +168,7 @@
   .main-body {
     overflow: hidden;
     margin-top: 50px;
+    margin-right: 20px;
   }
   .flex-container-word {
     display: none;
@@ -238,6 +239,7 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 10px;
   margin-left: 85px;
+  width: 320px;
   }
     .photo {
      width: 100%;
@@ -392,8 +394,8 @@
     margin-right: 100px;
     }
   .photo {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     cursor: pointer;
     }
@@ -551,7 +553,7 @@
     cursor: pointer;
     }
 }/* styles for big screens */
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1921px) {
   /* styles for larger screens */
   head {
     background-color: #291528;
@@ -594,7 +596,7 @@
     margin-top: 100px;
   }
   .flex-container {
-    display: flex;
+    display: none;
   }
   .flex-container > div {
     margin-top: 100px;
@@ -613,7 +615,7 @@
     padding-bottom: 60px;
   }
   .flex-container-word {
-    display: flex;
+    display: none;
   }
   .flex-container-word > div {
     margin-top: 100px;
