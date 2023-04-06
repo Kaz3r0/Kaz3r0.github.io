@@ -71,7 +71,7 @@ function changeColor() {
         element.style.backgroundColor = '#BD010E';
     });
     buttonhover.forEach(function(element) {
-        element.style.backgroundColor = '#b56fb1';
+        element.style.backgroundColor = '#fe5f6a';
     });
     text.forEach(function(element) {
         element.style.color = '#0B73BD';

@@ -1,4 +1,13 @@
 function submitRating() {
-  // show notification
-  const notification = new Notification('Thank You for Rating!');
+  
+  const button = document.query Selector("button")
+  const notification = 
+
+  button.addEventListener("click", () =>{
+	  Notification.requestPermission().then(perm =>{
+		  if (perm === "granted") {
+			new Notification('Thank You for Rating!');
+		  }
+	  })
+  })
 }
