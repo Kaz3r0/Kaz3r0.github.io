@@ -38,9 +38,9 @@
   <form class="rater" id="reviewForm">
   <div class="rate-text">
     <p class="rate-text">Give it a Rating</p>
-    <label for="name">Name:</label>
+    <label class="name" for="name">Name:</label>
     <input type="text" id="name" name="name" required>
-    <label for="rating">Rating:</label>
+    <label class="ratingstars" for="rating">Rating:</label>
     <select id="rating" name="rating" required>
         <option value="">Select rating</option>
         <option value="1">1 star</option>
@@ -49,7 +49,7 @@
         <option value="4">4 stars</option>
         <option value="5">5 stars</option>
     </select>
-    <label for="comment">Comment:</label>
+    <label class="comments" for="comment">Comment:</label>
     <textarea id="comment" name="comment"></textarea>
     <button type="submit">Submit</button>
   </div>  

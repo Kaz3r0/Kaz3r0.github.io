@@ -64,7 +64,7 @@
   .still-page {
     margin-left: auto;
     margin-right: auto;
-    width: 1870px;
+    width: 100%;
   }
   .button-container {
     display: flex;
