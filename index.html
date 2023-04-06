@@ -48,9 +48,14 @@
           <script src="Script1.js">
           </script>
           <script src="ColorChanger.js"></script>
+           <script src="Notif.js"></script>
           <form>
             <input type="number" id="ratevid" name="ratevid" max="10" min="0" placeholder="Rate Video Out of 10">
           </form>
+<button class="center-button" id="submit" onclick="submitRating(); document.querySelector('form').reset();">
+  Submit Rating
+</button>
+          <p></p>
           <button class="color-button" id="colorButton" onclick="changeColor()">Change Color</button>
         </div>
         <div class="music-month">

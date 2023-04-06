@@ -234,6 +234,7 @@
     margin-top: 15px;
     cursor: pointer;
     margin-left: 180px;
+    width: 200px;
   }
   .color-button {
     border: none;
