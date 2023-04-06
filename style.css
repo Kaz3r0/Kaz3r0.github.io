@@ -252,39 +252,6 @@
   button#colorButton {
     background-color: black;
   }
-        .hero-splash {
-        height: 100vh;
-        background-image: url("https://picsum.photos/1920/1080");
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: #fff;
-        text-shadow: 2px 2px 4px #000;
-      }
-      .hero-splash h1 {
-        font-size: 6rem;
-        margin: 0;
-      }
-      .hero-splash p {
-        font-size: 2rem;
-        margin: 2rem 0;
-      }
-      .hero-splash button {
-        padding: 1rem 2rem;
-        border: none;
-        background-color: #fff;
-        color: #000;
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-      .hero-splash button:hover {
-        background-color: #000;
-        color: #fff;
-      }
 } /* styles for phone screens */
 @media only screen and (max-width: 749px) {
   head {
@@ -901,7 +868,7 @@
     float: left;
     background-color: #291528;
     border: 5px solid #000000;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 40px;
     margin-right: 80px;
     padding-bottom: 60px;
