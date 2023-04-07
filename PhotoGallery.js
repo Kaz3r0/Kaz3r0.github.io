@@ -4,7 +4,8 @@ modal.classList.add('modal');
 document.body.appendChild(modal);
 
 photos.forEach(function(photo) {
-  photo.addEventListener('click', function() {
+  photo.addEventListener('click',
+  function() {
     var modalContent = document.createElement('img');
     modalContent.src = this.src;
     modal.appendChild(modalContent);
@@ -12,7 +13,8 @@ photos.forEach(function(photo) {
   });
 });
 
-modal.addEventListener('click', function() {
+modal.addEventListener('click',
+function() {
   modal.style.display = 'none';
   modal.innerHTML = '';
 });

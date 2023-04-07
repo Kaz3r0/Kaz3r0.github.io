@@ -17,13 +17,13 @@ function changeColor() {
     patchNotes.style.backgroundColor = '#291528';
     musicMonth.style.backgroundColor = '#291528';
     button.forEach(function(element) {
-        element.style.backgroundColor = '#753c72';
+      element.style.backgroundColor = '#753c72';
     });
     buttonhover.forEach(function(element) {
-        element.style.backgroundColor = '#b56fb1';
+      element.style.backgroundColor = '#b56fb1';
     });
     text.forEach(function(element) {
-        element.style.color = '#ff8c87';
+      element.style.color = '#ff8c87';
     });
   } else if (body.style.backgroundColor === 'rgb(179, 75, 73)') {
     body.style.backgroundColor = '#A8CD1B';
@@ -57,9 +57,8 @@ function changeColor() {
     text.forEach(function(element) {
       element.style.color = '#F5D0C5';
     });
-}
-  
-  
+  }
+
   else {
     body.style.backgroundColor = '#B34B49';
     head.style.backgroundColor = '#700E0C';
@@ -68,17 +67,16 @@ function changeColor() {
     patchNotes.style.backgroundColor = '#700E0C';
     musicMonth.style.backgroundColor = '#700E0C';
     button.forEach(function(element) {
-        element.style.backgroundColor = '#BD010E';
+      element.style.backgroundColor = '#BD010E';
     });
     buttonhover.forEach(function(element) {
-        element.style.backgroundColor = '#fe5f6a';
+      element.style.backgroundColor = '#fe5f6a';
     });
     text.forEach(function(element) {
-        element.style.color = '#0B73BD';
+      element.style.color = '#0B73BD';
     });
   }
 }
 
 const button = document.querySelector('#colorButton');
 button.addEventListener('click', changeColor);
-
