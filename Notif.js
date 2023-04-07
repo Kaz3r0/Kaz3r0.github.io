@@ -1,7 +1,6 @@
 const submitBtn = document.getElementById('submit-btn');
 
-submitBtn.addEventListener('click', (event) = >{
+submitBtn.addEventListener('click', (event) => {
   event.preventDefault();
-  alert(`Thank you
-  for submitting the form ! `);
+  alert(`Thank you for submitting the form!`);
 });
